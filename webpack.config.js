@@ -51,6 +51,9 @@ module.exports = {
             sourceMap: true,
             plugins: [
               // Autoprefixerを有効化
+              AutoPrefixer({
+                browsers: ['last 1 versions', 'Android >= 5'],
+              }),
               // ベンダープレフィックスを自動付与する
               require("autoprefixer")({
                 grid: true
