@@ -1,3 +1,3 @@
 export function dev() {
-    alert("dev");
+  console.log("dev");
 }

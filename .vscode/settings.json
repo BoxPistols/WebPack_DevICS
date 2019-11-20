@@ -1,0 +1,7 @@
+{
+  "editor.tabSize": 2,
+  "zenMode.hideTabs": false,
+  "editor.useTabStops": false,
+  "jake.autoDetect": "off",
+  "grunt.autoDetect": "off"
+}
