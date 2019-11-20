@@ -3,5 +3,6 @@
   "zenMode.hideTabs": false,
   "editor.useTabStops": false,
   "jake.autoDetect": "off",
-  "grunt.autoDetect": "off"
+  "grunt.autoDetect": "off",
+  "vetur.format.styleInitialIndent": true
 }
