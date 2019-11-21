@@ -1,28 +1,69 @@
-.wrap
-  text-align: center
-  min-height: 100vh
-  background-color: teal
+$navWidth: 120px
 
-.header,.footer,.main,.aside, .nav
-  background-color: lightgray
-  border: 1px solid gray
+.grid-container
+  display: grid
+  grid-template-columns: 120px 1fr 80px
+  grid-template-rows: 40px 1fr 30px
+  min-height: 100vh  
+  > *
+    display: flex
+    text-align: center
+    justify-content: center
+    align-items: center
   
-.nav
-  float: left
+  header
+    grid-column: 2 / 4
+    grid-row: 1 / 2
+    background-color: #eee
 
-.header
-  position: absolute
-  top: 0
-  width: 100%
-
-.nav
-  position: absolute
-  top: 0
-  left: 0
-  width: 10rem
-  height: 100%
+  article
+    grid-column: 2 / 3
+    grid-row: 2 / 3
+    background-color: lightgray
+    height: 100%
   
-.footer
-  position: absolute
-  bottom: 0
-  width: 100%
+  aside
+    grid-column: 3 / 4
+    grid-row-start: 2 / 3
+
+  footer
+    grid-column: 1 / 4
+    grid-row: 3 / 4
+    background-color: gray
+
+  nav
+    grid-column: 1 / 2
+    grid-row: 1 / 4
+    background-color: #ccc
+
+// .wrap
+//     text-align: center
+//     min-height: 100vh
+//     background-color: #00808020
+
+// .header, .footer, .main, .aside, .nav
+//     background-color: rgba(82.7, 82.7, 82.7, 0.3)
+//     border: 1px solid gray
+
+// .nav
+//     float: left
+
+// .header
+//     position: absolute
+//     top: 0
+//     width: 100%
+
+// .nav
+//     position: absolute
+//     top: 0
+//     left: 0
+//     width: $navWidth
+//     height: 100%
+
+// .main
+//     margin-top: 25px
+
+// .footer
+//     position: absolute
+//     bottom: 0
+//     width: 100%
