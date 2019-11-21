@@ -1,15 +1,26 @@
 $navWidth: 120px
+$white: rgba(255, 255, 255, 0.85)
 
+@mixin fx_center
+  display: flex
+  justify-content: center
+  align-items: center
+  
+html
+  font-size: 62.5%
+body
+  font-size: 1.6rem
+  
 .grid-container
   display: grid
-  grid-template-columns: 120px 1fr 80px
+  grid-template-columns: 160px 1fr 80px
   grid-template-rows: 40px 1fr 30px
   min-height: 100vh  
-  > *
-    display: flex
-    text-align: center
-    justify-content: center
-    align-items: center
+  // > *
+  //   display: flex
+  //   text-align: center
+  //   justify-content: center
+  //   align-items: center
   
   header
     grid-column: 2 / 4
@@ -27,15 +38,40 @@ $navWidth: 120px
     grid-row-start: 2 / 3
 
   footer
-    grid-column: 1 / 4
+    grid-column: 2 / 4
     grid-row: 3 / 4
-    background-color: gray
+    background-color: lighten(gray, 45)
+    text-align: center
 
   nav
     grid-column: 1 / 2
     grid-row: 1 / 4
     background-color: #ccc
-
+    background: darken(teal, 10)
+    color: $white
+    .org_nav      
+      .mol_navRole
+        +fx_center
+        padding: 1.5rem
+        height: 40px
+        background: darken(teal, 15)
+        .atm_navRole
+          &-name
+            color: yellow
+          &-img
+            >span
+              background-color: #fff
+              display: block
+              width: 24px
+              height: 24px
+              margin-right: 12px
+      .mol_navList
+        ul
+          // padding: 24px
+          li
+            padding: 16px
+            //&:!(nth-last-of-type())    
+            border-bottom: 1px solid $white
 // .wrap
 //     text-align: center
 //     min-height: 100vh
