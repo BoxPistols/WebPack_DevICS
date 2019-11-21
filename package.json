@@ -18,5 +18,9 @@
   "private": true,
   "dependencies": {
     "postcss-loader": "^3.0.0"
-  }
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 9"
+  ]
 }

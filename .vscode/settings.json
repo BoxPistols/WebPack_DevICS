@@ -4,5 +4,8 @@
   "editor.useTabStops": false,
   "jake.autoDetect": "off",
   "grunt.autoDetect": "off",
-  "vetur.format.styleInitialIndent": true
+  "vetur.format.styleInitialIndent": true,
+  "workbench.colorCustomizations": {
+    "tab.unfocusedActiveBorder": "#fff0"
+  }
 }
