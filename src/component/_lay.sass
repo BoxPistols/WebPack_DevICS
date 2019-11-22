@@ -32,7 +32,9 @@ body
     grid-row: 2 / 3
     // background-color: lightgray
     height: 100%
-    padding-right: 36px
+    padding: 24px 36px 24px 36px
+    @media all and (max-width: $breakPoint)
+      padding: 12px
   
   aside.aside
     grid-column: 3 / 4
