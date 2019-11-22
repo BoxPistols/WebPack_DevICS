@@ -43,7 +43,12 @@ body
     grid-column: 2 / 4
     grid-row: 3 / 4
     background-color: lighten(gray, 45)
-    text-align: center
+    // text-align: center
+    +fx_center
+    color: #999
+    small
+      font-size: .875rem
+      
 
 @media all and (max-width: $breakPoint)
   .grid-container
