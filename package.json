@@ -19,5 +19,5 @@
     "dependencies": {
         "postcss-loader": "^3.0.0"
     },
-    "browserslist": ["last 2 versions", "ie 11"]
+    "browserslist": ["last 1 versions", "Firefox ESR"]
 }
