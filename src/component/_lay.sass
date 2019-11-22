@@ -1,12 +1,4 @@
-$navWidth: 120px
-$white: rgba(255, 255, 255, 0.85)
-$mainColor: rgba(41, 101, 163, .85)
 
-@mixin fx_center
-  display: flex
-  justify-content: center
-  align-items: center
-  
 html
   font-size: 62.5%
 body
@@ -15,73 +7,55 @@ body
   
 .grid-container
   display: grid
-  grid-template-columns: 160px 1fr 80px
+  grid-template-columns: 160px 1fr 0px
+  &.active
+    &_sideBar
+      grid-template-columns: 160px 1fr 180px
+      &.active_navBar
+        grid-template-columns: 60px 1fr 180px
+    &_navBar
+      grid-template-columns: 60px 1fr 0px
+      &.active_sideBar
+        grid-template-columns: 60px 1fr 180px
+
   grid-template-rows: 40px 1fr 30px
-  min-height: 100vh  
+  min-height: 100vh
+  max-width: 100vw
+  overflow: hidden
   // > *
   //   display: flex
   //   text-align: center
   //   justify-content: center
   //   align-items: center
   
-  header
+  header.header
     grid-column: 2 / 4
     grid-row: 1 / 2
     background-color: #eee
   
-  nav
-    grid-column: 1 / 2
-    grid-row: 1 / 4
-    background-color: #ccc
-    // background: darken(teal, 10)
-    background: $mainColor
-    color: $white
-    .org_nav      
-      .mol_navRole
-        +fx_center
-        padding: 1.5rem
-        height: 40px
-        background: darken($mainColor, 8)
-        .atm_navRole
-          &-name
-            color: yellow
-          &-img
-            >span
-              background-color: #fff
-              display: block
-              width: 24px
-              height: 24px
-              margin-right: 12px
-              border-radius: 50%
-      .mol_navList
-        ul
-          // padding: 24px
-          li
-            padding: 16px
-            //&:!(nth-last-of-type())    
-            border-bottom: 1px solid rgba(255,255,255,.2)
-
-  article
+  article.article
     grid-column: 2 / 3
     grid-row: 2 / 3
     // background-color: lightgray
     height: 100%
+    padding-right: 36px
   
-  aside
+  aside.aside
     grid-column: 3 / 4
     grid-row-start: 2 / 3
     background: #ccc
 
-  footer
+  footer.footer
     grid-column: 2 / 4
     grid-row: 3 / 4
     background-color: lighten(gray, 45)
     text-align: center
 
-@media all and (max-width: 768px)
+@media all and (max-width: $breakPoint)
   .grid-container
     grid-template-columns: 1fr
-    // grid-template-rows: auto
+    grid-template-rows: auto
+    display: block
 
     header, article, nav, aside, footer
       grid-column: 1
@@ -95,7 +69,7 @@ body
 
     nav
       order: 2
-      display: none
+      // display: none
 
     aside
       order: 4

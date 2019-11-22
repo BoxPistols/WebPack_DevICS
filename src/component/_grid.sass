@@ -1,10 +1,7 @@
 .contents
   width: 100%
   .row
-    padding: 24px
-    
-.fx
-  display: flex
+    padding: 24px    
   
 .grd
   // background: #000
@@ -12,10 +9,18 @@
     width: 100%
   .grd_l-4
     max-width: calc(100% / 3)
+    width: 100%
+    &.md_l-12
+      @media all and (max-width: $breakPoint)
+        max-width: 100%
   
   .lay_card
     width: calc(100% + 24px)
     margin: -12px
+    @media all and (max-width: $breakPoint)
+      display: flex
+      flex-direction: column
+      
   .org_card
     display: flex
     justify-content: center
@@ -35,3 +40,4 @@
     width: 100%
     box-shadow: 2px 2px 8px #ccc
     padding: 24px
+    border-radius: 6px

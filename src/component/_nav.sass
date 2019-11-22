@@ -1,0 +1,50 @@
+nav.nav
+  position: relative
+  grid-column: 1 / 2
+  grid-row: 1 / 4
+  // background-color: #ccc
+  // background: darken(teal, 10)
+  //background: $mainColor
+  +main_gradColor
+  box-shadow: 2px 2px 8px #999
+  color: $white
+  &.active
+    width: 40px
+  .nav_toggle
+    position: absolute
+    +fx_center
+    top: 38px
+    right: -48px
+    // box-shadow: 2px 2px 8px #999
+    svg
+      width: 44px
+      height: 44px
+      transition: .3s
+      &:hover
+        cursor: pointer
+        fill: tomato
+  .org_nav      
+    .mol_navRole
+      +fx_center
+      padding: 1.5rem
+      // min-height: 40px
+      height: 60px
+      background: darken($mainColor, 0.1)
+      .atm_navRole
+        &-name
+          color: yellow
+        &-img
+          >span
+            background-color: #fff
+            display: block
+            width: 24px
+            height: 24px
+            margin-right: 12px
+            border-radius: 50%
+    .mol_navList
+      ul
+        // padding: 24px
+        li
+          padding: 16px
+          //&:!(nth-last-of-type())    
+          border-bottom: 1px solid rgba(255,255,255,.2)

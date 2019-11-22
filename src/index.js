@@ -1,8 +1,7 @@
-// import 文を使って sub.js ファイルを読み込む。
-import { hello } from "./sub";
-import { dev } from "./dev";
+import { sideBar_Open } from "./sideBar";
+import { navBar_Open } from "./navBar";
 import "./style.sass";
 
-// sub.jsに定義されたJavaScriptを実行する。
-hello();
-dev();
+// toggle menu
+sideBar_Open();
+navBar_Open();
