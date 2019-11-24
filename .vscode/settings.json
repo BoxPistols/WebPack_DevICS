@@ -1,9 +1,9 @@
 {
   "editor.tabSize": 2,
-  "zenMode.hideTabs": false,
-  "editor.useTabStops": false,
-  "jake.autoDetect": "off",
-  "grunt.autoDetect": "off",
+  "zenMode.hideTabs": true,
+  "editor.useTabStops": true,
+  "jake.autoDetect": "on",
+  "grunt.autoDetect": "on",
   "vetur.format.styleInitialIndent": true,
   "workbench.colorCustomizations": {
     "tab.unfocusedActiveBorder": "#fff0"
