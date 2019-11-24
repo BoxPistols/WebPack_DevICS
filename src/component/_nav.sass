@@ -4,12 +4,13 @@ nav.nav
   grid-row: 1 / 4
   // background-color: #ccc
   // background: darken(teal, 10)
-  //background: $mainColor
   +main_gradColor
   box-shadow: 2px 2px 8px #999
   color: $white
-  &.active
-    width: 40px
+  &.min_nav
+    font-size: 0
+    span
+      display: none
   .nav_toggle
     position: absolute
     +fx_center
@@ -18,7 +19,7 @@ nav.nav
     svg
       width: 36px
       height: 36px
-      transition: .3s
+      transition: .2s
       &:hover
         cursor: pointer
         fill: tomato
@@ -27,25 +28,30 @@ nav.nav
     //   font-size: 0
     .mol_navRole
       +fx_center
-      padding: 1.5rem
+      // padding: 1.5rem
       // min-height: 40px
       height: 60px
-      background: darken($mainColor, 0.1)
-      .atm_navRole
+      padding-top: 10px
+      // background: darken($mainColor, 0.1)
+      background: rgba(4, 24, 43, 0.2)
+      .atm_navRole        
         &-name
-          color: yellow
+          color: $white
         &-img
           >span
             background-color: #fff
             display: block
-            width: 24px
-            height: 24px
+            width: 32px
+            height: 32px
             margin-right: 12px
             border-radius: 50%
     .mol_navList
-      ul
+      >ul
         // padding: 24px
-        li a
+        @media all and (max-width: $breakPoint)
+          display: flex
+          overflow-x: scroll
+        >li a
           color: $white
           +fx_center
           vertical-align: middle
