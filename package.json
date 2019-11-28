@@ -17,7 +17,11 @@
     },
     "private": true,
     "dependencies": {
-        "postcss-loader": "^3.0.0"
+        "postcss-loader": "^3.0.0",
+        "stylus": "^0.54.7"
     },
-    "browserslist": ["last 1 versions", "Firefox ESR"]
+    "browserslist": [
+        "last 1 versions",
+        "Firefox ESR"
+    ]
 }
